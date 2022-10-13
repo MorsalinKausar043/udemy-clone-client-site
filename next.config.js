@@ -7,6 +7,7 @@ const nextConfig = {
       "demoapus2.com",
       "github.com",
       "dummyimage.com",
+      "s.udemycdn.com",
     ],
   },
   reactStrictMode: true,

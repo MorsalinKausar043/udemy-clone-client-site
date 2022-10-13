@@ -11,6 +11,7 @@ import { Pagination, Navigation } from "swiper";
 import ReactStars from "react-rating-stars-component";
 import courseApi from "./api/Api";
 import Defination from "./Defi/Defination";
+import Image from "next/image";
 
 const Courses = () => {
   // click slider main option
@@ -120,11 +121,14 @@ const Courses = () => {
                         <SwiperSlide key={id}>
                           <div className="cursor-pointer">
                             {/* image  */}
-                            <div className="w-full h-40">
-                              <img
+                            <div className="w-full h-40 relative">
+                              <Image
                                 src={image}
                                 alt="slider-data"
-                                className="w-full h-full"
+                                width="100%"
+                                height="100%"
+                                layout="fill"
+                                objectFit="cover"
                               />
                             </div>
                             {/* data  */}
@@ -229,11 +233,14 @@ const Courses = () => {
                       <SwiperSlide key={id}>
                         <div className="cursor-pointer">
                           {/* image  */}
-                          <div className="w-full h-40">
-                            <img
+                          <div className="w-full h-40 relative">
+                            <Image
                               src={image}
                               alt="slider-data"
-                              className="w-full h-full"
+                              width="100%"
+                              height="100%"
+                              layout="fill"
+                              objectFit="cover"
                             />
                           </div>
                           {/* data  */}

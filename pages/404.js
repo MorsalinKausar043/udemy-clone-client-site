@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import Navbar from "../components/Home/Navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 const Error = () => {
   return (
@@ -12,12 +13,13 @@ const Error = () => {
           {/* natbar define  */}
           <Navbar />
           <div className="w-full flex flex-col justify-center items-center grow ">
-            <div className="">
+            <div className="h-44 w-64 md:h-64 md:w-96 relative cursor-pointer">
               <Link href="/">
-                <img
+                <Image
                   src="https://i.ibb.co/HrMcrYd/error-desktop-v1.jpg"
                   alt="error-pic"
-                  className="w-48 h-48"
+                  layout="fill" // required
+                  objectFit="contain" //
                 />
               </Link>
             </div>

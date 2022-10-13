@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Instructor = ({ id, title, body, image, btn, order, cls }) => {
@@ -10,11 +11,16 @@ const Instructor = ({ id, title, body, image, btn, order, cls }) => {
           <div className="flex justify-around flex-col md:flex-row">
             {/* image  */}
             <div
-              className={`w-full md:w-2/4 h-auto ${
+              className={`w-full md:w-96 relative h-56 md:h-96 ${
                 order === true ? "order-1 md:order-2" : "order-2"
               }`}
             >
-              <img src={image} alt="Instractor-Image" className="w-full full" />
+              <Image
+                src={image}
+                alt="Instractor-Image"
+                layout="fill" // required
+                objectFit="contain"
+              />
             </div>
             {/* content  */}
             <div

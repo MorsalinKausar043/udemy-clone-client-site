@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const SponsorLogo = [
@@ -36,8 +37,13 @@ const Sponsor = () => {
             <ul className="w-full flex justify-around items-center flex-wrap">
               {SponsorLogo.map(({ id, logo }) => (
                 <>
-                  <li key={id}>
-                    <img src={logo} alt="sponsor-logo" />
+                  <li key={id} className="h-12 w-24 relative">
+                    <Image
+                      src={logo}
+                      alt="sponsor-logo"
+                      layout="fill" // required
+                      objectFit="contain"
+                    />
                   </li>
                 </>
               ))}
