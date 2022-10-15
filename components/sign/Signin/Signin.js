@@ -127,7 +127,7 @@ const Signin = () => {
               </div>
               {/* go Sign Up  */}
               <div className="flex justify-center items-center mt-2 py-3 px-3 md:px-4 w-72 md:w-80 ">
-                <span>Don Not have an account?</span>
+                <span>Don not have an account?</span>
                 <Link href="/signup">
                   <button className="ml-2 text-md  text-purple-700 underline font-bold">
                     Sign Up
